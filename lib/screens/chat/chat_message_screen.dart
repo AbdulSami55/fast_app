@@ -1,5 +1,6 @@
 import 'package:fast_app/Model/chat.dart';
 import 'package:fast_app/config/app_colors.dart';
+import 'package:fast_app/screens/chat/chat_api.dart';
 import 'package:flutter/material.dart';
 
 class ChatMessageScreen extends StatefulWidget {
@@ -11,55 +12,42 @@ class ChatMessageScreen extends StatefulWidget {
 
 class _ChatMessageScreenState extends State<ChatMessageScreen> {
   List<Chat>? cList;
+  List<Chat2>? onlineChatp;
+
   TextEditingController replyController = TextEditingController();
   @override
   void initState() {
+    getOnlineChat();
+
+    getOfflineChat();
+    setState(() {});
+
+    super.initState();
+  }
+
+  getOnlineChat() async {
+    final api = ChatApi();
+
+    onlineChatp = await api.getChat(1);
+  }
+
+  getOfflineChat() {
     cList = [
       Chat(
           id: 1,
-          message: "This is a sample message",
+          message: "Hello brother",
           senderId: 0,
           receiverId: 0,
           isSender: true,
-          time: "18:56"),
+          time: "5:58"),
       Chat(
           id: 1,
-          message: "This is a sample message",
+          message: "Hii how are u?",
           isSender: false,
           senderId: 0,
           receiverId: 0,
-          time: "18:56"),
-      Chat(
-          id: 1,
-          message: "This is a sample message",
-          isSender: true,
-          senderId: 0,
-          receiverId: 0,
-          time: "18:56"),
-      Chat(
-          id: 1,
-          message: "This is a sample message",
-          senderId: 0,
-          receiverId: 0,
-          isSender: true,
-          time: "18:56"),
-      Chat(
-          id: 1,
-          message: "This is a sample message",
-          isSender: true,
-          senderId: 0,
-          receiverId: 0,
-          time: "18:56"),
-      Chat(
-          id: 1,
-          message: "This is a sample message",
-          isSender: false,
-          senderId: 0,
-          receiverId: 0,
-          time: "18:56")
+          time: "5:59"),
     ];
-
-    super.initState();
   }
 
   @override
@@ -92,7 +80,6 @@ class _ChatMessageScreenState extends State<ChatMessageScreen> {
                 child: Padding(
                 padding: const EdgeInsets.all(8.0),
                 child: ListView.builder(
-                    reverse: true,
                     itemCount: cList!.length,
                     itemBuilder: (context, index) {
                       return Padding(
@@ -153,7 +140,16 @@ class _ChatMessageScreenState extends State<ChatMessageScreen> {
             IconButton(onPressed: () {}, icon: Icon(Icons.file_copy_rounded)),
             Spacer(),
             TextButton(
-                onPressed: () {},
+                onPressed: () {
+                  if (replyController.text != "")
+                    cList!.add(Chat(
+                        id: 1,
+                        message: "${replyController.text}",
+                        senderId: 0,
+                        receiverId: 0,
+                        time: "6:00"));
+                  setState(() {});
+                },
                 child: Text(
                   "Send",
                   style: TextStyle(color: primaryColor),

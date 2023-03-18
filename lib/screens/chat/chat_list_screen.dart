@@ -25,7 +25,7 @@ class ChatListScreen extends StatelessWidget {
             ),
             Expanded(
               child: ListView.builder(
-                  itemCount: 10,
+                  itemCount: 1,
                   itemBuilder: (context, index) {
                     return GestureDetector(
                       onTap: () {
@@ -40,10 +40,10 @@ class ChatListScreen extends StatelessWidget {
                             leading: CircleAvatar(
                               backgroundColor: backgroundColor,
                             ),
-                            title: Text("Miracle Dias"),
+                            title: Text("Abdul Sami"),
                             subtitle: Padding(
                               padding: const EdgeInsets.symmetric(vertical: 4),
-                              child: Text("1 new message"),
+                              child: Text("no new message"),
                             ),
                             trailing: IconButton(
                               onPressed: () {},

@@ -9,14 +9,6 @@ packages:
       url: "https://pub.dev"
     source: hosted
     version: "1.0.18"
-  agora_rtc_engine:
-    dependency: "direct main"
-    description:
-      name: agora_rtc_engine
-      sha256: "756650b27ee787cf2f49e0d0ecf8ea5e9eb797948719a5768ad58a4614b0b125"
-      url: "https://pub.dev"
-    source: hosted
-    version: "3.4.6"
   args:
     dependency: transitive
     description:
@@ -408,14 +400,6 @@ packages:
       url: "https://pub.dev"
     source: hosted
     version: "0.6.5"
-  json_annotation:
-    dependency: transitive
-    description:
-      name: json_annotation
-      sha256: "6cec7404b25d6338c8cb7b30131cd6c760079a4ec1fa7846c55bdda91f9d2819"
-      url: "https://pub.dev"
-    source: hosted
-    version: "3.1.1"
   lints:
     dependency: transitive
     description:
