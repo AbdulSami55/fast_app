@@ -42,8 +42,8 @@ class Goto {
   }
 }
 
-const screens = [
-  Home(),
+List<Widget> screens = [
+  SearchScreen(),
   SearchScreen(),
   AddProductScreen(),
   ChatListScreen(),
