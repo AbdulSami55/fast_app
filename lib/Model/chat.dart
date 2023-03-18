@@ -2,12 +2,16 @@ class Chat {
   int id;
   String message;
   bool isSender;
+  int senderId;
+  int receiverId;
   String time;
   String? profileUrl;
   Chat(
-      {required this.id,
+      {this.isSender = false,
+      required this.id,
       required this.message,
-      required this.isSender,
+      required this.senderId,
+      required this.receiverId,
       required this.time,
       this.profileUrl});
 }

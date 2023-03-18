@@ -71,7 +71,7 @@ class MyApp extends StatelessWidget {
       debugShowCheckedModeBanner: false,
       initialBinding: ControllerBindings(),
       title: 'Flutter Demo',
-      home: ProductDetail(),
+      home: DashboardScreen(),
     );
   }
 }

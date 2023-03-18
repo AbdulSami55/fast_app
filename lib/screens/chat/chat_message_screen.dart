@@ -18,32 +18,44 @@ class _ChatMessageScreenState extends State<ChatMessageScreen> {
       Chat(
           id: 1,
           message: "This is a sample message",
+          senderId: 0,
+          receiverId: 0,
           isSender: true,
           time: "18:56"),
       Chat(
           id: 1,
           message: "This is a sample message",
           isSender: false,
+          senderId: 0,
+          receiverId: 0,
           time: "18:56"),
       Chat(
           id: 1,
           message: "This is a sample message",
+          isSender: true,
+          senderId: 0,
+          receiverId: 0,
+          time: "18:56"),
+      Chat(
+          id: 1,
+          message: "This is a sample message",
+          senderId: 0,
+          receiverId: 0,
           isSender: true,
           time: "18:56"),
       Chat(
           id: 1,
           message: "This is a sample message",
           isSender: true,
-          time: "18:56"),
-      Chat(
-          id: 1,
-          message: "This is a sample message",
-          isSender: true,
+          senderId: 0,
+          receiverId: 0,
           time: "18:56"),
       Chat(
           id: 1,
           message: "This is a sample message",
           isSender: false,
+          senderId: 0,
+          receiverId: 0,
           time: "18:56")
     ];
 
