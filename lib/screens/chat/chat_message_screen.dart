@@ -91,9 +91,16 @@ class _ChatMessageScreenState extends State<ChatMessageScreen> {
                               ? TextDirection.rtl
                               : null,
                           children: [
-                            CircleAvatar(
-                              backgroundColor: backgroundColor,
-                            ),
+                            cList![index].profileUrl == null
+                                ? const CircleAvatar(
+                                    backgroundColor: backgroundColor,
+                                    backgroundImage:
+                                        AssetImage('images/avatar.jpg'))
+                                : CircleAvatar(
+                                    backgroundColor: backgroundColor,
+                                    backgroundImage:
+                                        NetworkImage(cList![index].profileUrl!),
+                                  ),
                             Card(
                                 color: cList![index].isSender
                                     ? backgroundColor

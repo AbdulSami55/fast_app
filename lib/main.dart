@@ -4,6 +4,7 @@ import 'package:fast_app/screens/admin/controller/AuthController.dart';
 import 'package:fast_app/screens/admin/controller/SettingController.dart';
 import 'package:fast_app/screens/chat/chat_list_screen.dart';
 import 'package:fast_app/screens/dashboard.dart';
+import 'package:fast_app/screens/product_detail.dart/product_detail.dart';
 import 'package:fast_app/screens/profile/profile_screen.dart';
 import 'package:flutter/material.dart';
 import 'package:get/get_navigation/src/root/get_material_app.dart';
@@ -70,7 +71,7 @@ class MyApp extends StatelessWidget {
       debugShowCheckedModeBanner: false,
       initialBinding: ControllerBindings(),
       title: 'Flutter Demo',
-      home: DashboardScreen(),
+      home: ProductDetail(),
     );
   }
 }

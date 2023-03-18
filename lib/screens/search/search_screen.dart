@@ -43,7 +43,7 @@ class _SearchScreenState extends State<SearchScreen> {
             CupertinoSearchTextField(
               backgroundColor: backgroundColor,
               onSubmitted: (val) async {
-                recentSearchesManager.clearRecentSearches();
+                recentSearchesManager.addRecentSearch(val);
               },
             ),
             SizedBox(
