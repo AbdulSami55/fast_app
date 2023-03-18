@@ -58,7 +58,7 @@ class _ChatMessageScreenState extends State<ChatMessageScreen> {
         elevation: 0,
         iconTheme: IconThemeData(color: Colors.black),
         title: Text(
-          "Miracle Dias",
+          "Abdul sami",
           style: TextStyle(color: Colors.black, fontWeight: FontWeight.normal),
         ),
         actions: [
