@@ -1,0 +1,38 @@
+import 'package:flutter/cupertino.dart';
+
+import 'const_variable.dart';
+
+class Goto {
+  //
+  static void push(Widget screen) {
+    Navigator.push(
+      navigatorKey.currentContext!,
+      CupertinoPageRoute(
+        builder: (builder) => screen,
+      ),
+    );
+  }
+
+  //
+  static void pushAndRemove(Widget screen) {
+    Navigator.pushAndRemoveUntil(
+      navigatorKey.currentContext!,
+      CupertinoPageRoute(
+        builder: (builder) => screen,
+      ),
+      ((route) => false),
+    );
+  }
+
+  //
+  static void pop() {
+    if (Navigator.canPop(navigatorKey.currentContext!)) {
+      Navigator.pop(navigatorKey.currentContext!);
+    }
+  }
+
+  //
+  static bool canPop() {
+    return Navigator.canPop(navigatorKey.currentContext!);
+  }
+}

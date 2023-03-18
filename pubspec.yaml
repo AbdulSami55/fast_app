@@ -41,8 +41,18 @@ dependencies:
   path_provider: ^2.0.13
   sqflite: ^2.2.6
   http: ^0.13.5
+  google_sign_in: ^6.0.2
+  shared_preferences: ^2.0.18
+  connectivity_plus: ^3.0.3
+  flutter_screenutil: ^5.7.0
+  shimmer: ^2.0.0
+  fluttertoast: ^8.2.1
+  dio: ^5.0.3
+  firebase_messaging: ^14.3.0
+  google_fonts: ^4.0.3
+  flutter_local_notifications: ^8.2.0
+  provider: ^6.0.5
   dropdown_button2: ^1.9.4
-
 
 dev_dependencies:
   flutter_test:

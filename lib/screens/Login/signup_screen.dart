@@ -51,7 +51,7 @@ class SignupScreen extends StatelessWidget {
                 height: 8,
               ),
               Padding(
-                padding: const EdgeInsets.all(4.0),
+                padding: const EdgeInsets.all(2.0),
                 child: Column(
                   children: [
                     const Padding(
@@ -81,8 +81,11 @@ class SignupScreen extends StatelessWidget {
                   ],
                 ),
               ),
+              const SizedBox(
+                height: 8,
+              ),
               Padding(
-                padding: const EdgeInsets.all(4.0),
+                padding: const EdgeInsets.all(2.0),
                 child: Column(
                   children: [
                     const Padding(
