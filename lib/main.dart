@@ -2,6 +2,9 @@ import 'package:fast_app/Screens/Admin/home.dart';
 import 'package:fast_app/bindings.dart';
 import 'package:fast_app/screens/admin/controller/AuthController.dart';
 import 'package:fast_app/screens/admin/controller/SettingController.dart';
+import 'package:fast_app/screens/chat/chat_list_screen.dart';
+import 'package:fast_app/screens/dashboard.dart';
+import 'package:fast_app/screens/profile/profile_screen.dart';
 import 'package:flutter/material.dart';
 import 'package:get/get_navigation/src/root/get_material_app.dart';
 import 'package:firebase_core/firebase_core.dart';
@@ -55,7 +58,7 @@ void main() async {
     // ChangeNotifierProvider(
     //   create: (_) => AuthController(),
     // )
-  ], child: const Home()));
+  ], child: const MyApp()));
 }
 
 class MyApp extends StatelessWidget {
@@ -64,9 +67,10 @@ class MyApp extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return GetMaterialApp(
+      debugShowCheckedModeBanner: false,
       initialBinding: ControllerBindings(),
       title: 'Flutter Demo',
-      home: const Home(),
+      home: DashboardScreen(),
     );
   }
 }
