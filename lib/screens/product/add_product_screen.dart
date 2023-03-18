@@ -6,7 +6,6 @@ import 'package:fast_app/widgets/app_text_field.dart';
 import 'package:flutter/material.dart';
 import 'package:flutter/services.dart';
 import 'package:image_picker/image_picker.dart';
-import 'package:video_player/video_player.dart';
 
 class AddProductScreen extends StatefulWidget {
   AddProductScreen({super.key});
